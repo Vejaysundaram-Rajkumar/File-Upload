@@ -9,18 +9,86 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="script.js"></script>
     <style>
+        
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
         #indicatorContainerWrap{
     position: relative;
     display: inline-block;
 }
-
+.link {
+  color: #c4c3ca;
+}
+.link:hover {
+  color: #ffeba7;
+}
+.indict{
+    position: relative;
+    right:100px;
+    top:10px;
+}
  body {
      position: absolute;
      top: 30%;
      left: 40%;
-     background-color: #492020
+     background-color: #1f2029;
  }
- 
+ .card-3d-wrap {
+  position: relative;
+  right: 100px;
+  width: 440px;
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 1px;
+}
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position:absolute;    
+  top: 0;
+  left: 0;  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
+}
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #b1380cc3;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
 .rad-cntnt{
     position: absolute;
     display: table;
@@ -48,17 +116,58 @@
     left:0;
     z-index: 10;
 }
-    </style>
+  </style>
     <title>Document</title>
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/radialIndicator/1.4.0/radialIndicator.js"></script>
-    <div id="indicatorContainerWrap">
-        <div class="rad-prg" id="indicatorContainer"></div>
-        <div class="rad-cntnt">Click / Drop file to select.</div>
-        <input type="file" id="prgFileSelector" />
-    </div>
-    <div id="feedback">
-  
+    
+    <div class="card-3d-wrap mx-auto">
+        <div class="card-3d-wrapper">
+            <div class="card-front">
+                <div class="center-wrap">
+                    <div class="section text-center">
+                        <h4 class="mb-4 pb-3 cc">Upload</h4>                        
+                        <div id="indicatorContainerWrap">
+                            <div class="rad-prg" id="indicatorContainer"></div>
+                            <div class="rad-cntnt">Click / Drop file to select.</div>
+                            <input type="file" id="prgFileSelector" />
+                        </div>
+
+                                             </div>
+                  </div>
+              </div>
+            <div class="card-back">
+                <div class="center-wrap">
+                    <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Sign Up</h4>
+                        <h4 class="mb-4 pb-3">Welcome to PrintEase</h4>
+                        <div class="form-group">
+                            <input type="text" name="logname" class="form-style" placeholder="Username" id="logname" autocomplete="off">
+                            <i class="input-icon bi bi-person"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="email" name="logemail" class="form-style" placeholder="Email" id="logemail" autocomplete="off">
+                            <i class="input-icon bi bi-envelope-at"></i>
+                        </div>	
+                        <div class="form-group mt-2">
+                            <input type="password" name="logpass" class="form-style" placeholder="Password" id="logpass" autocomplete="off">
+                            <i class="input-icon bi bi-key"></i>
+                        </div>
+                        <a href="#" class="btn mt-4">Sign UP</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+    
+    
+    <div id="feedback" class="indict">
+      
 </body>
 </html>

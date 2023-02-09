@@ -61,7 +61,7 @@ $( document ).ready(function() {
                             }
                           }, false);
                           function succupload() {
-                            let msg = `<span style="color:green;">File <u><b>${file.name}</b></u> has been uploaded successfully.</span>`;
+                            let msg = `<span style="color:whitesmoke;">File <u><b>${file.name}</b></u> has been uploaded successfully.</span>`;
                             alert("File uploader sucessfully");
                             feedback.innerHTML = msg;
                           }
