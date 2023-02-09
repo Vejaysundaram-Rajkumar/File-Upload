@@ -54,12 +54,17 @@ $( document ).ready(function() {
                         xhr.upload.addEventListener("progress", function (e) {
                             if (e.lengthComputable) {
                                 var percentComplete = (e.loaded || e.position) * 100 / e.total;
-                                //Do something with upload progress
-                                console.log(percentComplete);
                                 containerProg.animate(percentComplete);
+                                setTimeout(succupload, 2000);
+                                
+                            
                             }
-                        }, false);
-
+                          }, false);
+                          function succupload() {
+                            let msg = `<span style="color:green;">File <u><b>${file.name}</b></u> has been uploaded successfully.</span>`;
+                            alert("File uploader sucessfully");
+                            feedback.innerHTML = msg;
+                          }
                         return xhr;
                     }
                 });
@@ -68,3 +73,5 @@ $( document ).ready(function() {
 
 
 });
+
+  
