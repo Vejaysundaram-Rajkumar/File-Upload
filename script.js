@@ -90,14 +90,14 @@ function next2(){
     
 }
 function next3(){
-    document.getElementById("ques3").hidden=false;
+    console.log("next3 is working")
     document.getElementById("ques1").hidden=true;
     document.getElementById("ques2").hidden=true;
     document.getElementById("upload").hidden=true;
-    
+    document.getElementById("ques3").hidden=false;
     
 }
-function next4(){}
+
 function back1(){
     document.getElementById("ques1").hidden=true;
     document.getElementById("ques2").hidden=true;
@@ -114,9 +114,9 @@ function back2(){
 }
 function back3(){
     document.getElementById("ques1").hidden=true;
-    document.getElementById("ques2").hidden=true;
+    document.getElementById("ques2").hidden=false;
     document.getElementById("upload").hidden=true;
-    document.getElementById("ques3").hidden=false;
+    document.getElementById("ques3").hidden=true;
     
 }
   

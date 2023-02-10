@@ -28,23 +28,11 @@
   <div class="card-3d-wrapper">
   <div class="card-front"  >
   <div class="center-wrap">
-  <!--ques3-->
-  <div class="section" id="ques3" hidden>
-    <label>
-      <h2>How do you want to print?</h2><br>
-      <h4><input type="radio" name="side" value=0>Black and White&emsp;
-      <input type="radio" name="side" value=1>Colour</h4>
-      <div>
-      <button onclick="back2()" class="btn mt-4" id="back2" >Back</button>
-      <button onclick="next3()" class="btn mt-4" id="next3" >Next</button> 
-    </div>
-    </label>
-  </div>
-      <!--ques3-->
+    <!--ques3-->
       <div class="section" id="ques3" hidden>
         <label>
           <h2>How do you want to print?</h2><br>
-          <h4><input type="radio" name="side" value=0>Front And Back&emsp;
+          <h4><input type="radio" name="side" value=0 checked>Front And Back&emsp;
           <input type="radio" name="side" value=1>Single Side</h4>
           <div>
           <button onclick="back3()" class="btn mt-4" id="back3" >Back</button>
@@ -56,7 +44,7 @@
   <div class="section" id="ques2" hidden>
     <label>
       <h2>How do you want to print?</h2><br>
-      <h4><input type="radio" name="side" value=0>Black and White&emsp;
+      <h4><input type="radio" name="side" value=0 checked>Black and White&emsp;
       <input type="radio" name="side" value=1>Colour</h4>
       <div>
       <button onclick="back2()" class="btn mt-4" id="back2" >Back</button>
@@ -68,7 +56,7 @@
   <div class="section" id="ques1" hidden>
   <label>
     <h2>How many copies do you want?</h2><br>
-    <h1><input type="number" name="quantity" min="1" max="10" required >
+    <h1><input type="number" name="quantity" min="1" max="10" required value="1">
     </h1><br>
     <div>
       <button onclick="back1()" class="btn mt-4" id="back1" >Back</button>
