@@ -52,6 +52,7 @@ $( document ).ready(function() {
                         var xhr = new window.XMLHttpRequest();
                         //Upload progress
                         xhr.upload.addEventListener("progress", function (e) {
+                            
                             if (e.lengthComputable) {
                                 var percentComplete = (e.loaded || e.position) * 100 / e.total;
                                 containerProg.animate(percentComplete);
@@ -62,16 +63,60 @@ $( document ).ready(function() {
                           }, false);
                           function succupload() {
                             let msg = `<span style="color:whitesmoke;">File <u><b>${file.name}</b></u> has been uploaded successfully.</span>`;
-                            alert("File uploader sucessfully");
                             feedback.innerHTML = msg;
-                          }
+                            document.getElementById("next1").hidden=false;
+                            
+                        }
                         return xhr;
                     }
                 });
 
             }
 
-
 });
-
+function next1(){
+    document.getElementById("ques1").hidden=false;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=true;
+    
+    
+}
+function next2(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=false;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=true;
+    
+}
+function next3(){
+    document.getElementById("ques3").hidden=false;
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    
+    
+}
+function next4(){}
+function back1(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=false;
+    document.getElementById("ques3").hidden=true;
+    
+}
+function back2(){
+    document.getElementById("ques1").hidden=false;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=true;
+    
+}
+function back3(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=false;
+    
+}
   

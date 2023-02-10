@@ -18,7 +18,7 @@
   <button class="btn btn-info btn-lg logout">
     <span class="glyphicon glyphicon-log-out"></span> Log out </button></div>
     
-
+  <!--upload card-->
   <div class="section">
   <div class="container">
   <div class="row medium-height justify-content-center">
@@ -26,10 +26,59 @@
   <div class="section pb-5 pt-5 pt-sm-2 text-center">
   <div class="card-3d-wrap mx-auto">
   <div class="card-3d-wrapper">
-  <div class="card-front">
+  <div class="card-front"  >
   <div class="center-wrap">
-  <div class="section ">
-    <h4 class="mb-4 pb-3" style="text-align:center;position:relative;top: 10px;font-size: 25px;">Upload your document</h4>
+  <!--ques3-->
+  <div class="section" id="ques3" hidden>
+    <label>
+      <h2>How do you want to print?</h2><br>
+      <h4><input type="radio" name="side" value=0>Black and White&emsp;
+      <input type="radio" name="side" value=1>Colour</h4>
+      <div>
+      <button onclick="back2()" class="btn mt-4" id="back2" >Back</button>
+      <button onclick="next3()" class="btn mt-4" id="next3" >Next</button> 
+    </div>
+    </label>
+  </div>
+      <!--ques3-->
+      <div class="section" id="ques3" hidden>
+        <label>
+          <h2>How do you want to print?</h2><br>
+          <h4><input type="radio" name="side" value=0>Front And Back&emsp;
+          <input type="radio" name="side" value=1>Single Side</h4>
+          <div>
+          <button onclick="back3()" class="btn mt-4" id="back3" >Back</button>
+          <button onclick="next4()" class="btn mt-4" id="next4" >Proceed</button> 
+        </div>
+        </label>
+      </div>  
+    <!--ques2-->
+  <div class="section" id="ques2" hidden>
+    <label>
+      <h2>How do you want to print?</h2><br>
+      <h4><input type="radio" name="side" value=0>Black and White&emsp;
+      <input type="radio" name="side" value=1>Colour</h4>
+      <div>
+      <button onclick="back2()" class="btn mt-4" id="back2" >Back</button>
+      <button onclick="next3()" class="btn mt-4" id="next3" >Next</button> 
+    </div>
+    </label>
+  </div>  
+  <!--ques1-->
+  <div class="section" id="ques1" hidden>
+  <label>
+    <h2>How many copies do you want?</h2><br>
+    <h1><input type="number" name="quantity" min="1" max="10" required >
+    </h1><br>
+    <div>
+      <button onclick="back1()" class="btn mt-4" id="back1" >Back</button>
+      <button onclick="next2()" class="btn mt-4" id="next2" >Next</button> 
+    </div>
+  </label>
+</div>
+  <!--upload-->
+  <div class="section" id="upload">
+    <h4 class="mb-4 pb-3" style="text-align:center;position:relative;font-size: 25px;" id="infotext">Upload your document</h4>
     <div class="form-group mt-2 justify-center">
     <div id="indicatorContainerWrap">
     <div class="rad-prg" id="indicatorContainer"></div>
@@ -39,10 +88,11 @@
     <div class="form-group mt-2">
       <div id="feedback" class="indict"> 
     </div>
-    <a href="#" class="btn mt-4">next</a>
+    <button onclick="next1()" class="btn mt-4" id="next1" hidden>next</button>
+    </div>
+    </div>
+  </div>
 
-    </div>
-    </div>
   </div>
   </div>
   </div>
@@ -52,7 +102,8 @@
   </div>
   </div>
   </div>
-  </div>
+  
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
