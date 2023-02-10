@@ -237,7 +237,7 @@ h6 span{
   border-radius: 4px;
   height: 44px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   -webkit-transition : all 200ms linear;
   transition: all 200ms linear;
@@ -258,7 +258,7 @@ h6 span{
   text-align: center;
   border: none;
   background-color: #ffeba7;
-  color: #102770;
+  color: black;
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
 .btn:active,
@@ -310,10 +310,32 @@ h6 span{
 #prgFileSelector{
     position: absolute;
     width: 50%;
-    height: 70%;
+    height: 75%;
     opacity: 0;
     background-color:black;
     top:0;
-    left:10;
+    left: 110px;
     z-index: 10;
+}
+
+/*button css */
+.logout{
+    position:sticky;
+    margin-top: 6px;
+    left:1380px;
+    width:180px;
+    height:40px;
+    display:inline-block;
+    border:0.16em solid rgba(203, 244, 21, 0);
+    border-radius:4em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: "Gill Sans", sans-serif; 
+    color:black;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.7;
 }
