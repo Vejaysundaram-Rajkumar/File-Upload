@@ -4,7 +4,6 @@ from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
-import subprocess
 
 def is_pdf_full_blank(file_path):
     manager = PDFResourceManager()
@@ -23,9 +22,8 @@ def is_pdf_full_blank(file_path):
     return text == ""
 
 if __name__ == "__main__":
-    file_path = "D://College//iquest//File-Upload//Leave Letter .pdf"
+    file_path = "D://College//iquest//File-Upload//resume.pdf"
     if is_pdf_full_blank(file_path):
         print("The PDF file is full blank.")
     else:
-        #os.startfile(file_path,"print")
-        subprocess.run(["lp", "-d", "EPSON L130 Series", "-o", "media=A4", "-o", "sides=singleside","-o","color=Grayscale", file_path])
+        os.startfile(file_path,"print")

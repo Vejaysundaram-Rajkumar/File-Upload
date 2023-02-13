@@ -92,9 +92,10 @@ h6 span{
 
 
 .card-3d-wrap {
-  width: 40vw;
+  position: relative;
+  width: 440px;
   max-width: 100%;
-  height: 30vw;
+  height: 400px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
@@ -104,6 +105,8 @@ h6 span{
   width: 100%;
   height: 100%;
   position:absolute;    
+  top: 0;
+  left: 0;  
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: all 600ms ease-out; 
@@ -317,12 +320,12 @@ h6 span{
 
 /*button css */
 .logout{
-    width:15%;
-    display: flex;
-    justify-self: right;
-    display:block;
-    position: relative;
-    left:85%;
+    position:sticky;
+    margin-top: 6px;
+    left:1350px;
+    width:180px;
+    height:40px;
+    display:inline-block;
     border:0.16em solid rgba(203, 244, 21, 0);
     border-radius:4em;
     box-sizing: border-box;
