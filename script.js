@@ -79,7 +79,8 @@ function next1(){
     document.getElementById("ques2").hidden=true;
     document.getElementById("upload").hidden=true;
     document.getElementById("ques3").hidden=true;
-    
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
     
 }
 function next2(){
@@ -87,6 +88,8 @@ function next2(){
     document.getElementById("ques2").hidden=false;
     document.getElementById("upload").hidden=true;
     document.getElementById("ques3").hidden=true;
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
     
 }
 function next3(){
@@ -95,28 +98,57 @@ function next3(){
     document.getElementById("ques2").hidden=true;
     document.getElementById("upload").hidden=true;
     document.getElementById("ques3").hidden=false;
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
+}
+function next4(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=true;
+    document.getElementById("bill").hidden=false;
+    document.getElementById("scan").hidden=true;
     
 }
+  
 
 function back1(){
     document.getElementById("ques1").hidden=true;
     document.getElementById("ques2").hidden=true;
     document.getElementById("upload").hidden=false;
     document.getElementById("ques3").hidden=true;
-    
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
 }
 function back2(){
     document.getElementById("ques1").hidden=false;
     document.getElementById("ques2").hidden=true;
     document.getElementById("upload").hidden=true;
     document.getElementById("ques3").hidden=true;
-    
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
 }
 function back3(){
     document.getElementById("ques1").hidden=true;
     document.getElementById("ques2").hidden=false;
     document.getElementById("upload").hidden=true;
     document.getElementById("ques3").hidden=true;
-    
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
 }
-  
+function back4(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=false;
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=true;
+}
+function checkout(){
+    document.getElementById("ques1").hidden=true;
+    document.getElementById("ques2").hidden=true;
+    document.getElementById("upload").hidden=true;
+    document.getElementById("ques3").hidden=true;
+    document.getElementById("bill").hidden=true;
+    document.getElementById("scan").hidden=false;
+}

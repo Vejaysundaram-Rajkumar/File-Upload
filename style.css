@@ -90,6 +90,10 @@ h6 span{
   transform: translateX(44px) rotate(-270deg);
 }
 
+.image{
+  width:260px;
+
+}
 
 .card-3d-wrap {
   position: relative;

@@ -18,14 +18,12 @@
 
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/radialIndicator/1.4.0/radialIndicator.js"></script>
-  <button class="btn btn-info btn-lg logout">
-    <span class="glyphicon glyphicon-log-out"></span> Log out </button></div>
 
   <!--upload card-->
   <div class="section">
     <div class="container">
       <div class="row medium-height justify-content-center">
-        <div class="col-13 text-center align-self-center py-5">
+        <div class="col-12 text-center align-self-center py-5">
           <div class="section pb-5 pt-5 pt-sm-2 text-center">
             <div class="card-3d-wrap mx-auto">
               <div class="card-3d-wrapper">
@@ -82,9 +80,35 @@
                         </h4>
                         <div>
                           <button onclick="back3()" class="btn mt-4" id="back3">Back</button>
-                          <button onclick="window.location.href='https://vejaysundaram-rajkumar.github.io/payment/'"
+                          <button onclick="next4()"
                             class="btn mt-4" id="next4">Proceed</button>
                         </div>
+                      </label>
+                    </div>
+                    <!--bill-->
+                    <div class="section" id="bill" hidden>
+                      <label>
+                        <h1 style="text-align:left">ORDER SUMMARY</h1>
+                        <br>
+                          <h4 style="text-align:left">OrderNo:</h4>
+                          <h4 style="text-align:left">Date:</h4>
+                          <hr>
+                          <h4 style="text-align:left">No of pages:</h4>
+                          <h4 style="text-align:left">Colour of the print:</h4>
+                          <h4 style="text-align:left">Type of print:</h4>
+                          <hr>
+                          <h4 style="text-align:left">Grand Total:</h4>
+                          <button onclick="back4()" class="btn mt-4" id="back3">Back</button>
+                          <button onclick="checkout()"class="btn mt-4" id="next4" style="position: relative;left:10%;">Checkout</button>
+                      </label>
+                    </div>
+                    <!--scan-->
+                    <div class="section" id="scan" hidden>
+                      <label>
+                        <h1>SCAN TO PAY</h1>
+                          <h3>₹ AMOUNT</h3><br>
+                          <img src="qr.png" class="image" alt="QR Code">
+
                       </label>
                     </div>
                   </div>
