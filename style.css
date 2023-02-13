@@ -320,12 +320,9 @@ h6 span{
 
 /*button css */
 .logout{
-    position:sticky;
-    margin-top: 6px;
-    left:1350px;
-    width:180px;
-    height:40px;
-    display:inline-block;
+    position:absolute;
+    display:flex;
+    justify-items: flex-end;
     border:0.16em solid rgba(203, 244, 21, 0);
     border-radius:4em;
     box-sizing: border-box;
